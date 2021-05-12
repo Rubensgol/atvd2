@@ -2,11 +2,11 @@ package model;
 
 import java.util.Date;
 
-public class Aluno {
-	public String matricula;
-	public String CPF;
-	public Date dataNascimento;
-	public String email;
+public class Aluno extends Pessoa {
+	private String matricula;
+	private String CPF;
+	private Date dataNascimento;
+	private String email;
 	public String getMatricula() {
 		return matricula;
 	}
@@ -34,7 +34,7 @@ public class Aluno {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Filha [matricula=");
+		builder.append("Aluno [matricula=");
 		builder.append(matricula);
 		builder.append(", CPF=");
 		builder.append(CPF);

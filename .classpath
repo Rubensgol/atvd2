@@ -6,5 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/arali/Downloads/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arali/Downloads/opencsv-5.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arali/Downloads/commons-collections4-4.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
