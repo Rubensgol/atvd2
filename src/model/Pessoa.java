@@ -1,6 +1,9 @@
 package model;
 
+import com.opencsv.bean.CsvBindByPosition;
+
 public class Pessoa {
+	@CsvBindByPosition(position = 4)
 	private String nome;
 
 	public String getNome() {

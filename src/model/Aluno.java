@@ -2,10 +2,21 @@ package model;
 
 import java.util.Date;
 
+import com.opencsv.bean.CsvBindByPosition;
+import com.opencsv.bean.CsvDate;
+
 public class Aluno extends Pessoa {
+	@CsvBindByPosition(position = 3)
 	private String matricula;
+	
+	@CsvBindByPosition(position = 2)
 	private String CPF;
+	
+	@CsvDate(value = "yyyy-MM-dd")
+	@CsvBindByPosition(position = 0)
 	private Date dataNascimento;
+	
+	@CsvBindByPosition(position = 1)
 	private String email;
 	public String getMatricula() {
 		return matricula;
@@ -42,6 +53,8 @@ public class Aluno extends Pessoa {
 		builder.append(dataNascimento);
 		builder.append(", email=");
 		builder.append(email);
+		builder.append(", getNome()=");
+		builder.append(getNome());
 		builder.append("]");
 		return builder.toString();
 	}
