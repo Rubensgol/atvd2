@@ -14,7 +14,7 @@ import DTO.Aluno;
 
 public class GravarXML implements Gravacao{
 	@Override
-	public boolean gravar(List<Aluno> alunos) {
+	public boolean inserir(List<Aluno> alunos) {
 		try{
 			FileOutputStream fos = new FileOutputStream("alunos.xml", true);
 			BufferedOutputStream buff = new BufferedOutputStream(fos);
@@ -29,7 +29,7 @@ public class GravarXML implements Gravacao{
 	}
 
 	@Override
-	public List<Aluno> ler() {
+	public List<Aluno> pesquisarTodos() {
 		try {
 			List<Aluno> lista = new ArrayList<Aluno>();
 			FileInputStream fis = new FileInputStream("alunos.xml");
@@ -42,5 +42,78 @@ public class GravarXML implements Gravacao{
 		    	System.err.printf("Erro na Abertura do Arquivo: %s. \n", e.getMessage());
 		    	return null;
 		    }
+	}
+	@Override
+	public boolean inserir(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		alunos.add(aluno);
+		if (inserir(alunos))
+			return true;
+		return false;
+	}
+
+	@Override
+	public boolean alterar(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getCPF().equals(aluno.getCPF())) {
+				aluno2 = aluno;
+				break;
+			}
+
+		}
+		if (inserir(alunos)) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean excluir(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getCPF().equals(aluno.getCPF())) {
+				alunos.remove(aluno2);
+				break;
+			}
+
+		}
+		if (inserir(alunos)) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public Aluno procurarPorMatricula(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getMatricula().equals(aluno.getMatricula())) {
+				return aluno2;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Aluno procurarPoremail(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getEmail().equals(aluno.getEmail())) {
+				return aluno2;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public boolean existe(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getMatricula().equals(aluno.getMatricula())) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
