@@ -15,6 +15,8 @@ import BO.DataUtil;
 public class main {
 
 	public static void main(String[] args) {
+		Gravacao gravar = new GravarBD();
+		Persistencia pers = new Persistencia(gravar);
 
 		ArrayList<Aluno> alunos = new ArrayList<Aluno>();
 		Aluno aluno = new Aluno();
@@ -33,14 +35,11 @@ public class main {
 		aluno.setMatricula("2017001332");
 		alunos.add(aluno);
 
-		Gravacao gravar = new GravarBD();
-		Persistencia pers = new Persistencia(gravar);
-		
-		if(pers.gravar(alunos))
+		if (pers.inserir(alunos))
 			System.out.println("gravou");
 		else
 			System.out.println("nao gravou");
-		
+
 	}
 
 }
