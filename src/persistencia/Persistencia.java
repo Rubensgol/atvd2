@@ -13,10 +13,10 @@ private Gravacao gravacao;
 	}
 	
 	public boolean gravar(List<Aluno> alunos) {
-		return gravacao.gravar(alunos);
+		return gravacao.inserir(alunos);
 		
 	}
 	public List<Aluno> ler(){
-		return gravacao.ler();
+		return gravacao.pesquisarTodos();
 	}
 }
