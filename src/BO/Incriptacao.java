@@ -1,4 +1,4 @@
-package Util;
+package BO;
 import java.security.MessageDigest;
 
 public class Incriptacao

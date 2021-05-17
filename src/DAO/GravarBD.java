@@ -1,4 +1,4 @@
-package persistencia;
+package DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import DTO.Aluno;
-import Util.Conexao;
-import Util.DataUtil;
+import conexao.*;
+import BO.Gravacao;
+import BO.DataUtil;
 
 public class GravarBD implements Gravacao {
 

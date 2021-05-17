@@ -1,4 +1,4 @@
-package Util;
+package BO;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -118,7 +118,7 @@ public class DataUtil {
         } catch (NullPointerException np) {
             // np.printStackTrace();
         }
-        return "o tipo " + dateFormat + " não é compativel com a função!";
+        return "o tipo " + dateFormat + " nï¿½o ï¿½ compativel com a funï¿½ï¿½o!";
     }
 
     public static String Hoje() {
@@ -382,9 +382,9 @@ public class DataUtil {
 	public static double diferencaEmDias(Date dataInicial, Date dataFinal){  
 		double result = 0;  
 		long diferenca = dataFinal.getTime() - dataInicial.getTime();  
-		double diferencaEmDias = (diferenca /1000) / 60 / 60 /24;              //resultado é diferença entre as datas em dias  
+		double diferencaEmDias = (diferenca /1000) / 60 / 60 /24;              //resultado ï¿½ diferenï¿½a entre as datas em dias  
 		long horasRestantes = (diferenca /1000) / 60 / 60 %24;                 //calcula as horas restantes  
-		result = diferencaEmDias + (horasRestantes /24d);                      //transforma as horas restantes em fração de dias  
+		result = diferencaEmDias + (horasRestantes /24d);                      //transforma as horas restantes em fraï¿½ï¿½o de dias  
 		return result;  
 	}  
 

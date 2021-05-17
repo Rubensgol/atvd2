@@ -1,16 +1,16 @@
 package main;
 
-import persistencia.Gravacao;
-import persistencia.GravarBD;
-import persistencia.GravarCSV;
-import persistencia.GravarJSON;
-import persistencia.GravarXML;
-import persistencia.Persistencia;
+import BO.Gravacao;
+import DAO.GravarBD;
+import DAO.GravarCSV;
+import DAO.GravarJSON;
+import DAO.GravarXML;
+import BO.Persistencia;
 
 import java.util.ArrayList;
 
 import DTO.Aluno;
-import Util.DataUtil;
+import BO.DataUtil;
 
 public class main {
 

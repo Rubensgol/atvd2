@@ -1,4 +1,4 @@
-package persistencia;
+package BO;
 
 import java.util.List;
 
