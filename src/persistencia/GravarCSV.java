@@ -19,7 +19,7 @@ import DTO.Aluno;
 public class GravarCSV implements Gravacao {
 
 	@Override
-	public boolean gravar(List<Aluno> alunos) {
+	public boolean inserir(List<Aluno> alunos) {
 		Writer writer;
 
 		try {
@@ -38,7 +38,7 @@ public class GravarCSV implements Gravacao {
 	}
 
 	@Override
-	public List<Aluno> ler() {
+	public List<Aluno> pesquisarTodos() {
 		Reader reader;
 		try {
 			reader = Files.newBufferedReader(Paths.get("alunos.csv"));
@@ -51,6 +51,80 @@ public class GravarCSV implements Gravacao {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	@Override
+	public boolean inserir(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		alunos.add(aluno);
+		if (inserir(alunos))
+			return true;
+		return false;
+	}
+
+	@Override
+	public boolean alterar(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getCPF().equals(aluno.getCPF())) {
+				aluno2 = aluno;
+				break;
+			}
+
+		}
+		if (inserir(alunos)) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean excluir(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getCPF().equals(aluno.getCPF())) {
+				alunos.remove(aluno2);
+				break;
+			}
+
+		}
+		if (inserir(alunos)) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public Aluno procurarPorMatricula(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getMatricula().equals(aluno.getMatricula())) {
+				return aluno2;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Aluno procurarPoremail(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getEmail().equals(aluno.getEmail())) {
+				return aluno2;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public boolean existe(Aluno aluno) {
+		List<Aluno> alunos = pesquisarTodos();
+		for (Aluno aluno2 : alunos) {
+			if (aluno2.getMatricula().equals(aluno.getMatricula())) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
