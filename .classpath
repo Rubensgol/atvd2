@@ -12,5 +12,7 @@
 	<classpathentry kind="lib" path="C:/Users/arali/Downloads/commons-collections4-4.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/arali/Downloads/commons-beanutils-1.9.4/commons-beanutils-1.9.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/arali/Downloads/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arali/eclipse-workspace/Atvd2/lib/mysql-connector-java.jar"/>
+	<classpathentry kind="src" path="lib"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

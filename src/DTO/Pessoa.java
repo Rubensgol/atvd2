@@ -1,4 +1,4 @@
-package model;
+package DTO;
 
 import com.opencsv.bean.CsvBindByPosition;
 
@@ -17,7 +17,7 @@ public class Pessoa {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Pai [nome=");
+		builder.append("[nome=");
 		builder.append(nome);
 		builder.append("]");
 		return builder.toString();
