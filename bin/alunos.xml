@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="model.Aluno">
+    <void property="CPF">
+     <string>12593099755</string>
+    </void>
+    <void property="dataNascimento">
+     <object class="java.util.Date">
+      <long>856062000000</long>
+     </object>
+    </void>
+    <void property="email">
+     <string>rubenssilva905@gmail.com</string>
+    </void>
+    <void property="matricula">
+     <string>2017001212</string>
+    </void>
+    <void property="nome">
+     <string>Rubens Silva Lima</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Aluno">
+    <void property="CPF">
+     <string>9309923293</string>
+    </void>
+    <void property="dataNascimento">
+     <object class="java.util.Date">
+      <long>903150000000</long>
+     </object>
+    </void>
+    <void property="email">
+     <string>aralis.silva@hotmail.com</string>
+    </void>
+    <void property="matricula">
+     <string>2017001332</string>
+    </void>
+    <void property="nome">
+     <string>Aramis Silva Lima</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="15.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="model.Aluno">
+    <void property="CPF">
+     <string>12593099755</string>
+    </void>
+    <void property="dataNascimento">
+     <object class="java.util.Date">
+      <long>856062000000</long>
+     </object>
+    </void>
+    <void property="email">
+     <string>rubenssilva905@gmail.com</string>
+    </void>
+    <void property="matricula">
+     <string>2017001212</string>
+    </void>
+    <void property="nome">
+     <string>Rubens Silva Lima</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Aluno">
+    <void property="CPF">
+     <string>9309923293</string>
+    </void>
+    <void property="dataNascimento">
+     <object class="java.util.Date">
+      <long>903150000000</long>
+     </object>
+    </void>
+    <void property="email">
+     <string>aralis.silva@hotmail.com</string>
+    </void>
+    <void property="matricula">
+     <string>2017001332</string>
+    </void>
+    <void property="nome">
+     <string>Aramis Silva Lima</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
